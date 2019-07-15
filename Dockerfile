@@ -15,4 +15,4 @@ Building
 docker build -t ssh:alpine .
 Running
 =======
-docker run -d -ti --name ssh -p 2002:22
+docker run -d -ti --name ssh -p 2002:22 ssh:alpine
