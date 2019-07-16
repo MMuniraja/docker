@@ -1,1 +1,13 @@
+The Registry is a stateless, highly scalable server side application that stores and lets you distribute Docker images. 
+The Registry is open-source, under the permissive Apache license.
+You should use the Registry if you want to:
+
+tightly control where your images are being stored
+fully own your images distribution pipeline
+integrate image storage and distribution tightly into your in-house development workflow
 docker run -d -p 5000:5000 --restart=always --name registry registry:2
+docker pull ubuntu
+docker image tag ubuntu localhost:5000/myfirst
+docker push localhost:5000/myfirstimage
+docker pull localhost:5000/myfirstimage
+docker container stop registry && docker container rm -v registry ---> Removing
